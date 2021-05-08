@@ -28,50 +28,35 @@
                 </div>
             </div> 
         </div>
-        <div class="lower-header" style="height: 60px;">
-            <div class="page-width">
-                <nav class="stickynav">
-                        <li class="nav-button">
-                            <a href="" class="nav-link">home</a></li>
-                        <li class="nav-button">
-                            <button class="nav-link"> snowboards <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-down" viewBox="0 0 32 32"><path fill="#444" d="M26.984 8.5l1.516 1.617L16 23.5 3.5 10.117 5.008 8.5 16 20.258z"></path></svg></button>
-                            <div class="nav-dropdown">
-                                asdasdasdasd
+        <div class="sticky-nav-wrapper" style="height: 59px;">
+            <div class="sticky-bar">
+                <div class="nav-bar">
+                    <div class="page-width">
+                        <div class="nav-bar-grid">
+                            <div class="nav-bar-grid-item">
+                                <nav id="hamnav">
+                                    <!-- [THE HAMBURGER] -->
+                                    <label for="hamburger">&#9776; Menu</label>
+                                    <input type="checkbox" id="hamburger"/>
+                              
+                                    <!-- [MENU ITEMS] -->
+                                    <div id="hamitems">
+                                      <a href="" class="ham-link">Home</a>
+                                      <a href="" class="ham-link">Snowboards</a>
+                                      <a href="" class="ham-link">Ski</a>
+                                      <a href="" class="ham-link">Men</a>
+                                      <a href="" class="ham-link">Women</a>
+                                      <a href="" class="ham-link">Brands</a>
+                                      <a href="" class="ham-link">Accessories</a>
+                                      <a href="" class="ham-link">sale</a>
+                                    </div>
+                                  </nav>
                             </div>
-                        </li>
-                        <li class="nav-button">
-                            <button class="nav-link"> ski <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-down" viewBox="0 0 32 32"><path fill="#444" d="M26.984 8.5l1.516 1.617L16 23.5 3.5 10.117 5.008 8.5 16 20.258z"></path></svg></button>
-                            <div class="nav-dropdown">
-                                asdasdasdasd
-                            </div>
-                        </li>
-                        <li class="nav-button">
-                            <button class="nav-link"> men <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-down" viewBox="0 0 32 32"><path fill="#444" d="M26.984 8.5l1.516 1.617L16 23.5 3.5 10.117 5.008 8.5 16 20.258z"></path></svg></button>
-                            <div class="nav-dropdown">
-                                asdasdasdasd
-                            </div>
-                        </li>
-                        <li class="nav-button">
-                            <button class="nav-link"> women <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-down" viewBox="0 0 32 32"><path fill="#444" d="M26.984 8.5l1.516 1.617L16 23.5 3.5 10.117 5.008 8.5 16 20.258z"></path></svg></button>
-                            <div class="nav-dropdown">
-                                asdasdasdasd
-                            </div>
-                        </li>
-                        <li class="nav-button">
-                            <button class="nav-link"> brands <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-down" viewBox="0 0 32 32"><path fill="#444" d="M26.984 8.5l1.516 1.617L16 23.5 3.5 10.117 5.008 8.5 16 20.258z"></path></svg></button>
-                            <div class="nav-dropdown">
-                                asdasdasdasd
-                            </div>
-                        </li>
-                        <li class="nav-button"><a href="" class="nav-link">accessories</a></li>
-                        <li class="nav-button"><a href="" class="nav-link">sale</a></li>
-                </nav>
-                <div class="acc">
-                    <a href="" class="acc-link">Account</a>
+                        </div>
+                    </div>
                 </div>
-            </div>                
+            </div>
         </div>
-
     </header>
     <div class="slider">
             <div class="slider-content">
@@ -126,47 +111,19 @@
             </div>
         </div>
     </div>  
-    <div class="page-width">    
-            <div class="content">
-                <!-- <div class="box1">
-                    <a class="box-link" href="" style="height: 489px;">
-                        <div style="height: 118px;">
-                            <p class="title">Snowboard</p>
-                            <span>View all</span>
-                        </div>
-                        <div class="img-container">
-                            <img src="/static/ADYSB00020_MUL_FRT4_1800-2400_1024x1024.jpeg" style="height: 330px;" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="box1">
-                    <a class="box-link" href="" style="height: 489px;">
-                        <div style="height: 118px;">
-                            <p class="title">Ski</p>
-                            <span>View all</span>
-                        </div>
-                        <div class="img-container" >
-                            <img src="/static/1600x0r_05037500361_1024x1024.jpeg" alt="" style="height: 330px;">
-                        </div>
-                    </a>
-                </div>
-                <div class="box1">
-                    <a class="box-link" href="" style="height: 489px;">
-                        <div style="height: 118px;">
-                            <p class="title">Accessories</p>
-                            <span>View all</span>
-                        </div>
-                        <div class="img-container">
-                            <img src="/static/furzbeanie_red_1024x1024.jpeg" alt="" style="height: 330px;">
-                        </div>
-                    </a>
-                </div> -->
+    <div class="content">    
+            <div class="page-width">
                 <div class="products">
                     <div class="grid">
-                        <div class="box11">
-                            asd
+                        <div class="box11" id="1">
+                            <a href="" class="collection" style="background-image: url(static/11_480x480.jpg);">
+                            <div class="collection-info">
+                                <p class="collection-title">Jackets</p>
+                                <p class="collection-text">View all</p>
+                            </div>
+                            </a>
                         </div>
-                        <div class="box11">
+                        <div class="box11" id="1">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -188,7 +145,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11">
+                        <div class="box11" id="1">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -210,7 +167,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11">
+                        <div class="box11" id="1">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -232,7 +189,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11"><a href="" class="product-card">
+                        <div class="box11 boxhide" id="1"><a href="" class="product-card">
                             <div class="product-img-container">
                                 <div class="product-image-wrapper">
                                     <div class="product-img" style="max-width: 165.0222222222222px">
@@ -253,7 +210,7 @@
                             </div>
                         </a>
                     </div>
-                        <div class="box11"><a href="" class="product-card">
+                        <div class="box11 boxhide"><a href="" class="product-card">
                             <div class="product-img-container">
                                 <div class="product-image-wrapper">
                                     <div class="product-img" style="max-width: 165.0222222222222px">
@@ -274,7 +231,7 @@
                             </div>
                         </a>
                     </div>
-                        <div class="box11">
+                        <div class="box11 boxhide">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -296,7 +253,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11">
+                        <div class="box11 boxhide">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -318,7 +275,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11"><a href="" class="product-card">
+                        <div class="box11 boxhide"><a href="" class="product-card">
                             <div class="product-img-container">
                                 <div class="product-image-wrapper">
                                     <div class="product-img" style="max-width: 165.0222222222222px">
@@ -339,7 +296,7 @@
                             </div>
                         </a>
                     </div>
-                        <div class="box11">
+                        <div class="box11 boxhide">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -366,7 +323,12 @@
                 <div class="products">
                     <div class="grid">
                         <div class="box11">
-                            asd
+                            <a href="" class="collection" style="background-image: url(static/10_480x480.jpg);">
+                                <div class="collection-info">
+                                    <p class="collection-title">Snowboard bindings</p>
+                                    <p class="collection-text">View all</p>
+                                </div>
+                                </a>
                         </div>
                         <div class="box11">
                             <a href="" class="product-card">
@@ -434,7 +396,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11"><a href="" class="product-card">
+                        <div class="box11 boxhide"><a href="" class="product-card">
                             <div class="product-img-container">
                                 <div class="product-image-wrapper">
                                     <div class="product-img" style="max-width: 165.0222222222222px">
@@ -455,7 +417,7 @@
                             </div>
                         </a>
                     </div>
-                        <div class="box11"><a href="" class="product-card">
+                        <div class="box11 boxhide"><a href="" class="product-card">
                             <div class="product-img-container">
                                 <div class="product-image-wrapper">
                                     <div class="product-img" style="max-width: 165.0222222222222px">
@@ -476,7 +438,7 @@
                             </div>
                         </a>
                     </div>
-                        <div class="box11">
+                        <div class="box11 boxhide">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -498,7 +460,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11">
+                        <div class="box11 boxhide">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">
@@ -520,7 +482,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="box11"><a href="" class="product-card">
+                        <div class="box11 boxhide"><a href="" class="product-card">
                             <div class="product-img-container">
                                 <div class="product-image-wrapper">
                                     <div class="product-img" style="max-width: 165.0222222222222px">
@@ -541,7 +503,7 @@
                             </div>
                         </a>
                     </div>
-                        <div class="box11">
+                        <div class="box11 boxhide">
                             <a href="" class="product-card">
                                 <div class="product-img-container">
                                     <div class="product-image-wrapper">

@@ -1,6 +1,6 @@
 body, input, textarea, button, select {
     font-size: 16px;
-    font-family: Karla, sans-serif;
+    font-family: 'Karla', sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #666666;
@@ -34,149 +34,417 @@ header {
     display: block;
     position: relative;
     background-color: #030303;
-
     .upper-header {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        
-        .grid-table-upper {
+            padding-top: 20px;
+            padding-bottom: 20px;
             
-            .grid-table-upper-logo {
-                width: 66%;
-                display: inline-block;
-            
-                .site-logo {
-                    padding-left: 20px;
-                    margin: 0;
-                }
-            }        
-
-            .grid-table-upper-nav {
-                width: 33%;
-                display: inline-block;
+            .grid-table-upper {
                 
-
-             
-                .upper-nav {
-                    float: right;
-                    
-                    input {
-                        border: 0;
-                        max-width: 100%;
-                        position: relative;
-                    }
-
-                    .search-button {
-                        width: 22px;
-                        height: 22px;
-                        fill: currentColor;
-                        display: inline-block;
-                        color: white;
-                                            
-                    }
-
-                    .cart {
-                        width: 22px;
-                        height: 22px;
-                        fill: currentColor;
-                        display: inline-block;
-                        color: white;
-                    }
-                }
-            }   
-        }
-    } 
-
-    .lower-header {
-        position: relative;
-        border-top: 1px solid #101010;
-        background-color: #030303;
-        
-
-            nav {
-                padding: 20px 20px 0px 0;
-                width: 80%;
-                display: inline-block;
-
-
-                .nav-button {
-                    display: inline;
-                    position: relative;
-                    z-index: 7;
-
-                    .nav-link {
-                        background-color: transparent;
-                        border: none;
-                    }
-
-                    .nav-dropdown {
-                        display: block;
-                        visibility: hidden;
-                        right: 0;
-                        background-color: white;
-                        z-index: 6;
-                        position: absolute;
-                        left: 0;
-                        padding: 0;
+                .grid-table-upper-logo {
+                    width: 66%;
+                    display: inline-block;
+                
+                    .site-logo {
+                        padding-left: 20px;
                         margin: 0;
                     }
-                }
+                }        
 
-                a {
-                    text-decoration: none;
-                }
-
-                .nav-link:hover {
-                    color: white;
-                }
-
-                .nav-link{
-                    font-size: 0.875em;
-                    font-weight: 700;
-                    letter-spacing: 0.6px;
-                    text-transform: uppercase;
-                    position: relative;
-                    color: white;
-                    color: rgba(255, 255, 255, 0.6);
-                    padding: 0 20px 20px 20px ;
-                }
-
-                .nav-button:hover::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 20px;
-                    right: 20px;
-                    height: 3px;
-                    background-color: #006eff;
-                }
-            
-                svg {
-                    position: relative;
-                    top: -1.5px;
-                    width: 9px;
-                    height: 9px;
-                    fill: currentColor;
-                    display: inline-block;
-                    vertical-align: middle;
-                    color: white;
-                }
-            }  
-            
-            .acc {
-                width: 19%;
-                display: inline-block;
-                text-align: right; 
-
-                .acc-link {
-                    color: rgba(255, 255, 255, 0.6);
-                    padding: 20px 10px;
-                    font-size: 0.8125em;
-                    text-decoration: none;
+                .grid-table-upper-nav {
+                    width: 33%;
+                    display: inline-block;        
+                        .upper-nav {
+                        float: right;                        
+                            input {
+                                border: 0;
+                                max-width: 100%;
+                                position: relative;
+                            }
+                            .search-button {
+                                width: 22px;
+                                height: 22px;
+                                fill: currentColor;
+                                display: inline-block;
+                                color: white;                                                
+                            }
+                            .cart {
+                                width: 22px;
+                                height: 22px;
+                                fill: currentColor;
+                                display: inline-block;
+                                color: white;
+                            }
+                    }
+                }   
+            }
+        } 
+    .sticky-nav-wrapper {
+        position: relative;
+        width: 100%;     
+        .sticky-bar {
+            position: relative;
+            overflow: hidden;
+            .nav-bar {
+                position: relative;
+                border-top: 1px solid #101010;
+                background-color: #030303;
+                z-index: 5;
+                .nav-bar-grid {
+                    display: table;
+                    table-layout: fixed;
+                    width: 100%;
+                    margin-left: 0;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    .nav-bar-grid-item {
+                        float: none;
+                        display: table-cell;
+                        vertical-align: middle;
+                        padding-left: 0;
+                        width: 80%;
+                        /* [ON BIG SCREENS] */
+                            /* Wrapper */
+                            #hamnav {
+                                background: transparent;
+                                label {
+                                display: none;
+                                }
+                            }
+                            /* Hide Hamburger */
+                            #hamburger {
+                                display: none;
+                            }
+                            /* Horizontal Menu Items */
+                            #hamitems {
+                                .ham-link {
+                                    font-size: 0.875em;
+                                    font-weight: 700;
+                                    letter-spacing: 0.6px;
+                                    text-transform: uppercase;
+                                    position: relative;
+                                    color: rgba(255, 255, 255, 0.6);
+                                    padding: 20px;
+                                    z-index: 7;
+                                    text-decoration: none;
+                                    text-align: center;
+                                    line-height: 4;
+                            
+                                /* 100% / 5 tabs = 20% */
+                                
+                                
+                                text-decoration: none;
+                                text-align: center;
+                            
+                                &:hover {
+                                    color: white;
+                                }
+                                }
+                            }
+                            @media screen and (max-width: 1095px) {
+                                /* Show Hamburger Icon */
+                                #hamnav label {
+                                display: inline-block;
+                                color: white;
+                                background: transparent;
+                                font-style: normal;
+                                font-size: 1.2em;
+                                padding: 10px;
+                                padding-top: 15px;
+                            }
+                                
+                            /* Break down menu items into vertical */
+                                
+                            #hamitems {
+                                .ham-link {
+                                box-sizing: border-box;
+                                display: block;
+                                width: 100%;
+                                border-top: 1px solid #333;
+                                }
+                                
+                                display: none;
+                            }
+                                
+                            /* Toggle Show/Hide Menu */
+                                
+                            #hamnav input:checked ~ #hamitems {
+                                display: block;
+                            }
+                        }
+                    }
                 }
             }
         }    
-}    
+    }       
+}
+@media screen and (max-width: 750px) {
+    header {
+        display: block;
+        position: relative;
+        background-color: #030303;
+        .upper-header {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                z-index: 9;
+                
+                .grid-table-upper {
+                    
+                    .grid-table-upper-logo {
+                        width: 66%;
+                        display: inline-block;
+                    
+                        .site-logo {
+                            
+                            margin: 0;
+                        }
+                    }        
+    
+                    .grid-table-upper-nav {
+                        width: 33%;
+                        display: inline-block;        
+                            .upper-nav {
+                            float: right;                        
+                                input {
+                                    border: 0;
+                                    max-width: 100%;
+                                    position: relative;
+                                }
+                                .search-button {
+                                    width: 22px;
+                                    height: 22px;
+                                    fill: currentColor;
+                                    display: inline-block;
+                                    color: white;
+                                    display: none;                                               
+                                }
+                                .cart {
+                                    width: 22px;
+                                    height: 22px;
+                                    fill: currentColor;
+                                    display: inline-block;
+                                    color: white;
+                                }
+                        }
+                    }   
+                }
+            } 
+        .sticky-nav-wrapper {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+                
+            .sticky-bar {
+                position: relative;
+                overflow: hidden;
+                .nav-bar {
+                    position: relative;
+                    z-index: 5;
+                    .nav-bar-grid {
+                        display: table;
+                        table-layout: fixed;
+                        width: 100%;
+                        margin-left: 0;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        .nav-bar-grid-item {
+                            float: none;
+                            display: table-cell;
+                            vertical-align: middle;
+                            padding-left: 0;
+                            width: 40%;
+                            /* [ON BIG SCREENS] */
+                                /* Wrapper */
+                                #hamnav {
+                                    position: relative;
+                                    background: transparent;
+                                    label {
+                                    display: none;
+                                    }
+                                }
+                                /* Hide Hamburger */
+                                #hamburger {
+                                    display: none;
+                                }
+                                /* Horizontal Menu Items */
+                                #hamitems {
+                                    .ham-link {
+                                        font-size: 0.875em;
+                                        font-weight: 700;
+                                        letter-spacing: 0.6px;
+                                        text-transform: uppercase;
+                                        position: relative;
+                                        color: rgba(255, 255, 255, 0.6);
+                                        padding: 20px;
+                                        z-index: 7;
+                                        text-decoration: none;
+                                        text-align: center;
+                                        line-height: 4;
+                                
+                                    /* 100% / 5 tabs = 20% */
+                                    
+                                    
+                                    text-decoration: none;
+                                    text-align: center;
+                                
+                                    &:hover {
+                                        color: white;
+                                    }
+                                    }
+                                }
+                                 
+                                    /* Show Hamburger Icon */
+                                    #hamnav label {
+                                    display: inline-block;
+                                    color: white;
+                                    background: transparent;
+                                    font-style: normal;
+                                    font-size: 1.2em;
+                                    padding: 10px;
+                                    padding-top: 15px;
+                                }
+                                    
+                                /* Break down menu items into vertical */
+                                    
+                                #hamitems {
+                                    .ham-link {
+                                    box-sizing: border-box;
+                                    display: block;
+                                    width: 100%;
+                                    border-top: 1px solid #333;
+                                    }
+                                    
+                                    display: none;
+                                }
+                                    
+                                /* Toggle Show/Hide Menu */
+                                    
+                                #hamnav input:checked ~ #hamitems {
+                                    display: block;
+                                }
+                            
+                        }
+                    }
+                }
+            }    
+        }       
+    }
+}
+                         
+                    
+                            
+                            
+                            
+                                
+                            
+                                
+                                
+                            
+                                
+                            
+                            
+    
+
+
+    
+    
+                     
+                    
+    
+                            
+                        
+                    
+    // .lower-header {
+    //     position: relative;
+    //     border-top: 1px solid #101010;
+    //     background-color: #030303;
+        
+
+    //         nav {
+    //             padding: 20px 20px 0px 0;
+    //             width: 80%;
+    //             display: inline-block;
+
+
+    //             .nav-button {
+    //                 display: inline;
+    //                 position: relative;
+    //                 z-index: 7;
+
+    //                 .nav-link {
+    //                     background-color: transparent;
+    //                     border: none;
+    //                 }
+
+    //                 .nav-dropdown {
+    //                     display: block;
+    //                     visibility: hidden;
+    //                     right: 0;
+    //                     background-color: white;
+    //                     z-index: 6;
+    //                     position: absolute;
+    //                     left: 0;
+    //                     padding: 0;
+    //                     margin: 0;
+    //                 }
+    //             }
+
+    //             a {
+    //                 text-decoration: none;
+    //             }
+
+    //             .nav-link:hover {
+    //                 color: white;
+    //             }
+
+    //             .nav-link{
+    //                 font-size: 0.875em;
+    //                 font-weight: 700;
+    //                 letter-spacing: 0.6px;
+    //                 text-transform: uppercase;
+    //                 position: relative;
+    //                 color: white;
+    //                 color: rgba(255, 255, 255, 0.6);
+    //                 padding: 0 20px 20px 20px ;
+    //             }
+
+    //             .nav-button:hover::after {
+    //                 content: '';
+    //                 position: absolute;
+    //                 bottom: 0;
+    //                 left: 20px;
+    //                 right: 20px;
+    //                 height: 3px;
+    //                 background-color: #006eff;
+    //             }
+            
+    //             svg {
+    //                 position: relative;
+    //                 top: -1.5px;
+    //                 width: 9px;
+    //                 height: 9px;
+    //                 fill: currentColor;
+    //                 display: inline-block;
+    //                 vertical-align: middle;
+    //                 color: white;
+    //             }
+    //         }  
+            
+    //         .acc {
+    //             width: 19%;
+    //             display: inline-block;
+    //             text-align: right; 
+
+    //             .acc-link {
+    //                 color: rgba(255, 255, 255, 0.6);
+    //                 padding: 20px 10px;
+    //                 font-size: 0.8125em;
+    //                 text-decoration: none;
+    //             }
+    //         }
+    //     }    
+    
 
 .slider{
     position: relative;
@@ -186,7 +454,7 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: -100px;
+    margin-bottom: -60px;
 }    
 .slider-content {
         position: absolute;
@@ -194,21 +462,23 @@ header {
         bottom: 45px;
         left: 0;
         bottom: 120px;
+        overflow: hidden;
     
 
         h2 {
-            display: inline;            
+            display: inline;           
             line-height: 1.35;
             margin-bottom: 0.625rem;
             padding: 0 10px;
             background-color: #006eff;
             color: white;
-            font-size: 3.75em;
+            font-size: 2.75em;
             font-family: "Unica One", sans-serif;
             font-style: normal;
             font-weight: 400;
             letter-spacing: 0.1em;
             text-transform: uppercase;
+            overflow: hidden;
             
         }
     }
@@ -235,8 +505,10 @@ header {
             text-decoration: none;
             .section-header {
                 padding: 30px 5% 10px;
+                z-index: 1;
                 .section-header-h1 {
-                    font-size: 1.75em;
+                    display: block;
+                    font-size: 1.40em;
                     margin-bottom: 0;
                     color: #030303;
                     font-family: "Unica One", sans-serif;
@@ -245,6 +517,8 @@ header {
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
                     margin: 0 0 0.625em;
+                    overflow: hidden;
+                    z-index: 1;
                 }
                 .section-header-span {
                     font-weight: 700;
@@ -272,117 +546,86 @@ header {
                 }
             }
         }
+        .grid-item-link:hover:before {
+            opacity: 1;
+        }
+        .grid-item-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            transition: opacity 0.15s ease-in;
+            z-index: 1;
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .section-grid {
+        .grid-item {
+            padding-left: 0;
+            width: 100%;
+            display: inline-block;
+        }
     }
 }
 
-                
-            
-    .content {
-        position: relative;
-        margin-bottom: -200px;
-        letter-spacing: -.31em;
-        text-rendering: optimizeSpeed;
+.content {
+    position: relative;
+    margin-bottom: -200px;
+    letter-spacing: -.31em;
+    text-rendering: optimizeSpeed;
+    margin-bottom: 50px;
+    .products {
+        display: block;
+        margin-top: 50px;
         margin-bottom: 50px;
-        
-        .box1 {
-            width: 33.33333%;
+        .box11 {
+            width: 20%;
             display: inline-block;
             letter-spacing: normal;
             text-rendering: auto;
-            
-        }
-
-       
-        
-        .box-link {
-            display: block;
-            position: relative;
-            height: 100%;
-            text-align: center;
-            border-color: #f7f7f7;
-            border-style: solid;
-            border-width: 0 0 1px 1px;
-            background-color: white;
-            padding: 0 40px;
-            text-decoration: none;
-        }  
-        
-        .title {
-            font-size: 1.75em;
-            padding-top: 20px;
-            margin-bottom: 0;
-            color: #030303;
-            font-family: "Unica One", sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            
-        }
-
-        .img-container {
-            display: block;
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .img-wrapper {
-            display: block;
-        }
-
-        .products {
-            display: block;
-            margin-top: 50px;
-            margin-bottom: 50px;
-
-            .box11 {
-                width: 20%;
-                display: inline-block;
-                letter-spacing: normal;
-                text-rendering: auto;
-
-                .product-card {
-                    border-left-width: 0;
-                    padding: 25px;
-                    position: relative;
-                    display: block;
-                    background-color: white;
-                    text-align: center;
-                    padding: 12.5px;
-                    border-color: #f7f7f7;
-                    border-style: solid;
-                    border-width: 0 0 1px;
-                    color: #666666;
-
-                        .product-img-container {
-                            height: 235px;
-                            margin-bottom: 60px;
-                            display: table;
-                            width: 100%;
-
-                            .product-image-wrapper{
-                                display: table-cell;
-                                vertical-align: middle;
-
-                                .product-img {
-                                    position: relative;
-                                    margin: 0 auto;
-
-                                    .product1 {
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        right: 0;
-                                        width: 100%;
-                                        height: 100%;
-                                        max-width: 100%;
-                                        border: 0;
-                                    }
+            padding: 0.3px;
+            margin-bottom: -6.5px;
+            .product-card {
+                border-left-width: 0;
+                padding: 25px;
+                position: relative;
+                display: block;
+                background-color: white;
+                text-align: center;
+                padding: 12.5px;
+                border-color: #f7f7f7;
+                border-style: solid;
+                border-width: 0 0 1px;
+                color: #666666;
+                .product-img-container {
+                    height: 235px;
+                    margin-bottom: 60px;
+                    display: table;
+                    width: 100%;    
+                    .product-image-wrapper{
+                            display: table-cell;
+                            vertical-align: middle;
+                            .product-img {
+                                position: relative;
+                                margin: 0 auto;
+                                .product1 {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    max-width: 100%;
+                                    border: 0;
                                 }
                             }
                         }
-
+                    }
                         .product-info {
                             padding: 10px 12.5px 20px;
                             position: absolute;
@@ -390,16 +633,13 @@ header {
                             bottom: 0;
                             width: 100%;
                             background-color: white;
-
                             .product-name {
                                 font-weight: 700;
                                 color: #030303;
                                 white-space: normal;
                             }
-
                             .product-price {
                                 font-size: 0.875em;
-
                                 .hidden {
                                     position: absolute !important;
                                     overflow: hidden;
@@ -409,15 +649,104 @@ header {
                                     margin: -1px;
                                     padding: 0;
                                     border: 0;
-                                }
-                            }
-
-
                         }
                     }
                 }
             }
+            .product-card:hover:before {
+                opacity: 1;
+            }
+            .product-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.06);
+                opacity: 0;
+                transition: opacity 0.15s ease-in;
+                z-index: 1;
+            }
+        }
     }
+    .collection {
+        position: relative;
+        box-sizing: content-box;
+        display: block;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        padding: 13px;
+        height: 295px;
+        z-index: 1;
+        .collection-info {
+            bottom: 40px;
+            display: block;
+            position: absolute;
+            left: 0;
+            margin-right: 10px;
+            z-index: 2;
+            overflow: hidden;
+            .collection-title {
+                font-size: 1.5em;
+                display: inline;
+                background-color: #006eff;
+                color: white;
+                margin-bottom: 10px;
+                padding: 2px 10px;
+                letter-spacing: 0;
+                line-height: 1.4;
+                font-family: "Unica One", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: uppercase;
+                overflow: hidden;
+            }
+            .collection-text {
+                margin-bottom: 0;
+                font-weight: 700;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                margin: 10px 0 0 10px;
+                font-size: 0.8125em;
+                color: white;
+                overflow: hidden;
+            }
+        }
+    }
+    .collection::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.4;
+        z-index: 1;
+        transition: opacity 0.2s ease;
+    }
+}
+@media screen and (max-width: 750px) {
+    .content {
+        .products {
+            .box11 {
+                    width: 50%;
+                    display: inline-block;
+                    letter-spacing: normal;
+                    text-rendering: auto;
+                }
+            .boxhide {
+                    display: none;
+            }
+        }
+    }    
+}    
+            
+            
 .footer {
     position: relative;
     margin: 0;
@@ -426,7 +755,6 @@ header {
     color: white;
     color: rgba(255, 255, 255, 0.6);
     padding-top: 20px;
-}
     .footer-container{
         display: block;
         position: relative;
@@ -446,7 +774,20 @@ header {
                 padding: 0 10px;
             }
         }
-    }
+    }                            
+}
+                                
+                                
+
+                        
+
+                        
+
+                
+
+                
+
     
     
 
+    
